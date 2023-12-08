@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+
+<h1 class="text-capitalize text-center mx-10 bg-dark text-white"> Ajouter un nouveau Assuré </h1>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="nom"> Nom * </label>
+            <input name="nom" required type="text" class="form-control" id="nom"
+                placeholder="Nom de l'Assuré">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="prenom"> Prenom * </label>
+            <input name="prenom" required type="text" class="form-control" id="prenom"
+                placeholder="Prenom de l'Assuré">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="postnom"> Post-nom * </label>
+            <input name="postnom" required type="text" class="form-control" id="postnom"
+                placeholder="Post-nom de l'Assuré">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="numero"> Numero * </label>
+            <input name="numero" required type="number" class="form-control" id="numero"
+                placeholder="Numero de l'assuré">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="email"> Email * </label>
+            <input name="email" required type="email" class="form-control" id="email" placeholder="abc@gmail.com">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="addresse"> Address * </label>
+            <input name="addresse" required type="text" class="form-control" id="addresse" placeholder="Ville/Commune/Quartier...">
+        </div>
+        <div class="form-row">
+    </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="genre">Genre *</label>
+            <select name="genre" class="form-control" required id="genre">
+                <option> Choisir genre .. </option>
+                <option value="M">Masculin</option>
+                <option value="F">Feminin</option>
+            </select>
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary"> Sauvegarder </button>
+
+</form>
+
+<br><br><br>
+
+{% endblock content %}

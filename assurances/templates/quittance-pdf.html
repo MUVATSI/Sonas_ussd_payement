@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<!-- bootstrap -->
+   	<link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+  	<link rel="stylesheet" href="/static/css/style.css">
+
+	<!-- jquery -->
+  	<script src="https://code.jquery.com/jquery-3.6.3.js"
+			integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    	crossorigin="anonymous"></script>
+   	<title>Quittance</title>
+
+   <style>
+<!--     body {-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            font: 400 .875rem 'Open Sans', sans-serif;-->
+<!--            color: #bcd0f7;-->
+<!--            background-color: #1A233A;-->
+<!--            position: relative;-->
+<!--            height: 100%;-->
+<!--        }-->
+
+<!--        .invoice-container {-->
+<!--            padding: 1rem;-->
+<!--        }-->
+
+<!--        .invoice-container .invoice-header .invoice-logo {-->
+<!--            margin: 0.8rem 0 0 0;-->
+<!--            display: inline-block;-->
+<!--            font-size: 1.6rem;-->
+<!--            font-weight: 700;-->
+<!--            color: #bcd0f7;-->
+<!--        }-->
+
+<!--        .invoice-container .invoice-header .invoice-logo img {-->
+<!--            max-width: 130px;-->
+<!--        }-->
+
+<!--        .invoice-container .invoice-header address {-->
+<!--            font-size: 0.8rem;-->
+<!--            color: #8a99b5;-->
+<!--            margin: 0;-->
+<!--        }-->
+
+<!--        .invoice-container .invoice-details {-->
+<!--            margin: 1rem 0 0 0;-->
+<!--            padding: 1rem;-->
+<!--            line-height: 180%;-->
+<!--            background-color: #1a233a;-->
+<!--        }-->
+
+<!--        .invoice-container .invoice-details .invoice-num {-->
+<!--            text-align: right;-->
+<!--            font-size: 0.8rem;-->
+<!--        }-->
+
+<!--        .invoice-container .invoice-body {-->
+<!--            padding: 1rem 0 0 0;-->
+<!--        }-->
+
+<!--        .invoice-container .invoice-footer {-->
+<!--            text-align: center;-->
+<!--            font-size: 0.7rem;-->
+<!--            margin: 5px 0 0 0;-->
+<!--        }-->
+
+<!--        .invoice-status {-->
+<!--            text-align: center;-->
+<!--            padding: 1rem;-->
+<!--            background: #272e48;-->
+<!--            -webkit-border-radius: 4px;-->
+<!--            -moz-border-radius: 4px;-->
+<!--            border-radius: 4px;-->
+<!--            margin-bottom: 1rem;-->
+<!--        }-->
+
+<!--        .invoice-status h2.status {-->
+<!--            margin: 0 0 0.8rem 0;-->
+<!--        }-->
+
+<!--        .invoice-status h5.status-title {-->
+<!--            margin: 0 0 0.8rem 0;-->
+<!--            color: #8a99b5;-->
+<!--        }-->
+
+<!--        .invoice-status p.status-type {-->
+<!--            margin: 0.5rem 0 0 0;-->
+<!--            padding: 0;-->
+<!--            line-height: 150%;-->
+<!--        }-->
+
+<!--        .invoice-status i {-->
+<!--            font-size: 1.5rem;-->
+<!--            margin: 0 0 1rem 0;-->
+<!--            display: inline-block;-->
+<!--            padding: 1rem;-->
+<!--            background-color: #1a233a;-->
+<!--            -webkit-border-radius: 50px;-->
+<!--            -moz-border-radius: 50px;-->
+<!--            border-radius: 50px;-->
+<!--        }-->
+
+<!--        .invoice-status .badge {-->
+<!--            text-transform: uppercase;-->
+<!--        }-->
+
+<!--        @media (max-width: 767px) {-->
+<!--            .invoice-container {-->
+<!--                padding: 1rem;-->
+<!--            }-->
+<!--        }-->
+
+<!--        .card {-->
+<!--            background: #272E48;-->
+<!--            -webkit-border-radius: 5px;-->
+<!--            -moz-border-radius: 5px;-->
+<!--            border-radius: 5px;-->
+<!--            border: 0;-->
+<!--            margin-bottom: 1rem;-->
+<!--        }-->
+
+<!--        .custom-table {-->
+<!--            border: 1px solid #2b3958;-->
+<!--        }-->
+
+<!--        .custom-table thead {-->
+<!--            background-color: #0455b8;-->
+<!--        }-->
+
+<!--        .custom-table thead th {-->
+<!--            border: 0;-->
+<!--            color: #0b0b0b;-->
+<!--        }-->
+
+<!--        .custom-table>tbody tr:hover {-->
+<!--            background-color: #172033;-->
+<!--        }-->
+
+<!--        .custom-table>tbody tr:nth-of-type(even) {-->
+<!--            background-color: #1a243a;-->
+<!--        }-->
+
+<!--        .custom-table>tbody td {-->
+<!--            border: 1px solid #2e3d5f;-->
+<!--        }-->
+
+<!--        .table {-->
+<!--            background-color: #0b1326;-->
+<!--            color: #05070b;-->
+<!--            font-size: .75rem;-->
+<!--        }-->
+
+<!--        .text-success {-->
+<!--            color: #070800 !important;-->
+<!--        }-->
+
+<!--        .custom-actions-btns {-->
+<!--            margin: auto;-->
+<!--            display: flex;-->
+<!--            justify-content: flex-end;-->
+<!--        }-->
+
+<!--        .custom-actions-btns .btn {-->
+<!--            margin: .3rem 0 .3rem .3rem;-->
+<!--        }-->
+
+   </style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="card">
+					<div class="card-body p-0">
+						<div class="invoice-container">
+							<div class="invoice-header">
+
+								<!-- Row start -->
+								<div class="row gutters">
+									<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+										<img alt="image" src="/static/image/sonas.png" width="200" height="125">
+									</div>
+									<div class="col-lg-6 col-md-4 col-sm-2 text-center">
+										<h4>SOCIETE NATIONALE D'ASSURANCES</h4>
+										<address class="text-center">
+											Capital Social: FC 43 43.162.000.000<br>
+											Siège Social: Nº 6664, Immeuble Sankuru, Boulevard du 30 Juin<br>
+											COMMUNE DE GOMBE, VILLE DE KINSHASA/RDC<br>
+											Id Nat. : 05736 RCCM-CD/KIN/RCCM/14-8-3646: NIF : AO700307/S<br>
+											<b>QUITTANCE</b>
+										</address>
+									</div>
+								</div>
+								<!-- Row end -->
+
+								<!-- Row start -->
+								<div class="invoice-details">
+									<div class="row gutters ">
+										<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+												<address>
+													<em>Nº IMPOT AO700307S</em><br>
+													<em>Nº RAR  :   0005</em><br>
+													<em>Nº Agrement ARCA: 12007</em>
+												</address>
+										</div>
+
+										<div class="col-lg-6 col-md-4 col-sm-2 text-center">
+											<address>
+												<b>Nº 0510223020005R</b><br>
+												<b>Valable du : </b> {{obj.mis_ajour}}<br>
+												<b>Intermediaire </b> 05102 <b>AGENCE DE BENI</b>
+											</address>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Row end -->
+
+							<div class="invoice-body">
+
+								<!-- Row start -->
+								<div class="row gutters">
+									<div class="col-lg-12 col-md-12 col-sm-12">
+										<h6 class="text-center">DECOMPTE DE PRIME EN DOLLARS AMERICAINS</h6>
+										<div class="table-responsive">
+											<table class="table custom-table m-0">
+												<tbody>
+													<tr>
+														<td><h6>IDENTITE DU CLIENT<br></h6>
+															Noms du Client &nbsp; : &nbsp;{{obj.assure.nom}}
+															{{obj.assure.prenom}} {{obj.assure.postnom}} <br>
+															Numero: &nbsp; {{obj.assure.numero}}<br>
+															Mail: &nbsp; {{obj.assure.email}}<br>
+															Membre: depuis le {{obj.assure.date_enr}}
+														</td>
+														<td><h6>DETAILS DU VEHICULE<br></h6>
+															Marque: &nbsp; {{obj.vehicule.marque}}<br>
+															Numero de Plaque: &nbsp; {{obj.vehicule.plaque}}<br>
+															Numero de chassis: {{obj.vehicule.numero_chassis}}<br>
+															Date de fabrication: {{obj.vehicule.date_fabrication}}
+														</td>
+
+														<td>
+															<h5 class="text-success"><strong>SOLDE: </strong></h5>
+															{{obj.montant}} $<br>
+															<h5 class="text-success"><strong>${{obj.montant}}</strong></h5>
+														</td>
+														<td>
+															<h6>Etat du paiement:<br></h6>
+															{% if obj.verifie  %}
+															&nbsp;
+															<img class="icon" src="/static/image/icon-yes.svg" alt="True">
+															&nbsp; &nbsp; Validé
+															{% else %}
+															&nbsp;
+															<img class="icon" src="/tatic/image/icon-no.svg" alt="False">
+															&nbsp; &nbsp; Non-Validé
+															{% endif %}
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- Row end -->
+
+								<div class="invoice-details">
+									<div class="row gutters ">
+										<div class="col-xl-12 col-lg-6 col-md-6 col-sm-6">
+											<h6>Pour le Receveur</h6><br>
+											<p>La présente quittance entraine l'application des garanties de la Sonas dans
+												les termes et limites des conditiions tant generales que particulières pour
+												lesquelles l'Assuré déclare avoir pris connaissance du fait de sa signature
+												sur la proposition d'assurance lui presentée
+											</p><br>
+											<h6>Prenneur d'Assurance <span style="margin-left: 30em">
+												Le Responsable</span></h6>
+											<br>
+											<h6>{{obj.assure.nom}} {{obj.assure.prenom}} {{obj.assure.postnom}}</h6>
+											<br><br><br>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="invoice-footer">
+								Tél (+243) 8156 659 350<br>
+								B.P. 3443 Kinshasa Gombe - a-mail: infos@sonas.cd - Site: www.sonas.cd<br>
+								DIRECTIONS DE REGION<br>
+								GOMA-BUTEMBO-BENI-BUKAVU-UVIRA-KINDU
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

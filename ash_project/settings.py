@@ -24,7 +24,7 @@ except Exception as e:
 SECRET_KEY = 'django-insecure-g@nmw&675ow)@(k2z_mk7l2(%0^3ub0czjhqnj^t=op3al^^(4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['c19e-135-129-124-172.ngrok-free.app', 'localhost', '127.0.0.1']
 

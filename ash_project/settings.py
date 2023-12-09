@@ -24,7 +24,7 @@ except Exception as e:
 SECRET_KEY = 'django-insecure-g@nmw&675ow)@(k2z_mk7l2(%0^3ub0czjhqnj^t=op3al^^(4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['c19e-135-129-124-172.ngrok-free.app', 'localhost', '127.0.0.1']
 
@@ -119,7 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'assurances/static/'),)
 
